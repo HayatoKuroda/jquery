@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="pra_jq01.css" media="all">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(function(){
+		$('.button1').on('click',function(){
+			$('.box1').animate({width:450},500).animate({height:450},500).animate({width:300},500).animate({height:300},500).animate({width:450},500).animate({height:450},500).animate({width:300},500).animate({height:300},500).animate({width:450},500).animate({height:450},500).animate({width:300},500).animate({height:300},500).animate({width:450},500).animate({height:450},500).animate({width:300},500).animate({height:300},500).animate({width:450},500).animate({height:450},500).animate({width:300},500).animate({height:300},500);
+			$('.box2').animate({'top':'600','left':'100'},3000).animate({'top':'0','left':'40'},2000).animate({'top':'400'},1000).animate({'top':'0'},500).animate({'top':'400','left':'300'},1500).animate({'top':'100','left':'500','right':'270'},2000);
+			$('.box3').animate({'top':'20'},3000).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+			$('.button1').hide(500,function(){
+			var count = 10;
+			console.log('爆発まであと' + count + '秒です。');
+			});
+			$('.box4').animate({height:2000},5000).animate({width:3000},5000);
+				setTimeout(function(){
+					alert('ゲームオーバー：オワタに征服されました');
+				},10000);
+			$('.button2').css('display','block');
+		});
+		
+	$('.button1').mouseover(function(){
+		$('.button1').hide(2000,function(){
+		});	
+	});
+		alert('ヒント：ボタンを探しましょう');
+	$('.button2').on('click',function(){
+		alert('大当たり〜〜〜あなたの勝ちです。');
+	});
+});
+</script>
+</head>
+<body>
+	<div class="wrapper">
+		<button class="button1">スタート</button>
+		<button class="button2">！</button>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+	</div>
+</body>
+</html>
